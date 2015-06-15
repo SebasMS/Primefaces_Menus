@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Menus | Overlay</title>
+        <link rel="stylesheet" href="../resources/css/style.css" type="text/css" />
+    </h:head>
+    <h:body>
+        <h1>Overlay</h1>
+        <h:form>
+            <p:button class="btn" outcome="index.xhtml" value="Regresar" icon="ui-icon-star"/>
+            <p:commandButton id="dynaButton" value="Mostrar" type="button" icon="ui-icon-extlink"/>
+            <p:growl id="message" showDetail="true"/>            
+            <p:menu overlay="true" trigger="dynaButton" my="left top" at="left bottom">
+                <p:submenu label="Ajax">
+                   <p:menuitem value="Guardar" actionListener="#{menuView.save}" update="message" icon="ui-icon-disk" />
+                    <p:menuitem value="Actualizar" actionListener="#{menuView.update}" update="message" icon="ui-icon-arrowrefresh-1-w"/>
+                </p:submenu>
+                <p:submenu label="No-Ajax">
+                    <p:menuitem value="Eliminar" actionListener="#{menuView.delete}" update="message" ajax="false" icon="ui-icon-close"/>
+                </p:submenu>
+                <p:submenu label="Navegaciones">
+                    <p:menuitem value="Externo" url="https://github.com/sebasms" icon="ui-icon-home"/>
+                    <p:menuitem value="Interno" outcome="index.xhtml" icon="ui-icon-star"/>
+                </p:submenu>
+            </p:menu>
+        </h:form>
+    </h:body>
+</html>

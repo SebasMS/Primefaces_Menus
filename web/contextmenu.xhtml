@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Menus | Context Menu</title>
+        <link rel="stylesheet" href="../resources/css/style.css" type="text/css" />
+    </h:head>
+    <h:body>
+        <h1>Context Menu</h1>
+        <p:outputLabel value="Presiona clic derecho en el sitio web para ver el menu" />
+        <h:form>
+            <p:button class="btn" outcome="index.xhtml" value="Regresar" icon="ui-icon-star"/>
+            <p:growl id="message" showDetail="true"/>
+            <p:contextMenu>
+                <p:menuitem value="Guardar" actionListener="#{menuView.save}" update="message" icon="ui-icon-disk"/>
+                <p:menuitem value="Actualizar" actionListener="#{menuView.update}" update="message" icon="ui-icon-arrowrefresh-1-w"/>
+                <p:menuitem value="Eliminar" actionListener="#{menuView.delete}" ajax="false" icon="ui-icon-close"/>
+                <p:menuitem value="Página de inicio" url="http://www.primefaces.org" icon="ui-icon-extlink"/>
+            </p:contextMenu>
+        </h:form>
+    </h:body>
+</html>

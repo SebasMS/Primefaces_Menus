@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Menus</title>
-</head>
 <body>
     <h1>Primefaces | Menus</h1>
     <p>Cuando utilizas la tecnología JSF para la vista de una aplicación Web, no puedes menos que sentir que te faltan componentes más potentes, y con más versatilidad. Para suplir estas carencias existen varias empresas que compiten con distintos frameworks, y que nos hacen la vida más fácil. Hoy presentamos a uno de ellos que nos viene de tierras turcas: PrimeFaces.</p>

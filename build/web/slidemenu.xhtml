@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Menus | Slide Menu</title>
+        <link rel="stylesheet" href="../resources/css/style.css" type="text/css" />
+    </h:head>
+    <h:body>
+        <h1>Slide Menu</h1>
+        <h:form>
+            <p:growl id="messages" showDetail="true"/>
+ 
+            <p:slideMenu style="width:180px">
+                <p:submenu label="Ajax" icon="ui-icon-refresh">
+                    <p:menuitem value="Guardar" actionListener="#{menuView.save}" update="messages" icon="ui-icon-disk" />
+                    <p:menuitem value="Actualizar" actionListener="#{menuView.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />
+                </p:submenu>
+                <p:submenu label="No-Ajax" icon="ui-icon-newwin">
+                    <p:menuitem value="Eliminar" actionListener="#{menuView.delete}"  ajax="false" icon="ui-icon-close"/>
+                </p:submenu>
+                <p:separator />
+                <p:submenu label="Navegaciones" icon="ui-icon-extlink">
+                    <p:submenu label="Enlaces">
+                        <p:menuitem value="Prime" url="http://www.prime.com.tr" />
+                        <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />
+                    </p:submenu>
+                    <p:menuitem value="Regresar" outcome="index.xhtml" />
+                </p:submenu>
+            </p:slideMenu>
+ 
+            <p:separator />
+            <p:button class="btn" outcome="index.xhtml" value="Regresar" icon="ui-icon-star"/>
+ 
+            <p:commandButton id="dynaButton" value="Opciones" type="button" icon="ui-icon-extlink"/>
+            <p:slideMenu overlay="true" trigger="dynaButton" my="left top" at="left bottom" style="width:180px">
+                <p:submenu label="Ajax">
+                    <p:menuitem value="Guardar" actionListener="#{menuView.save}" update="messages" icon="ui-icon-disk"/>
+                    <p:menuitem value="Actualizar" actionListener="#{menuView.update}" update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+                </p:submenu>
+                <p:submenu label="No-Ajax">
+                    <p:menuitem value="Eliminar" actionListener="#{menuView.delete}"  ajax="false" icon="ui-icon-close"/>
+                </p:submenu>
+                <p:submenu label="Navegaciones" icon="ui-icon-extlink">
+                    <p:submenu label="Enlaces">
+                        <p:menuitem value="Prime" url="http://www.prime.com.tr" />
+                        <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />
+                    </p:submenu>
+                    <p:menuitem value="Regresar" outcome="index.xhtml" />
+                </p:submenu>
+            </p:slideMenu>
+        </h:form>
+    </h:body>
+</html>

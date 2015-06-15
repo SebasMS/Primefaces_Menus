@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Menus | Tab Menu</title>
+        <link rel="stylesheet" href="../resources/css/style.css" type="text/css" />
+    </h:head>
+    <h:body>
+        <h1>Tab Menu</h1>
+        <h:form>            
+            <p:tabMenu activeIndex="#{param.i}">
+                <p:menuitem value="Ver" outcome="tabmenu.xhtml" icon="ui-icon-star">
+                    <f:param name="i" value="0" />
+                </p:menuitem>
+                <p:menuitem value="Demostración" outcome="tabmenu.xhtml" icon="ui-icon-search">
+                    <f:param name="i" value="1" />
+                </p:menuitem>
+                <p:menuitem value="Documentación" outcome="tabmenu.xhtml" icon="ui-icon-document">
+                    <f:param name="i" value="2" />
+                </p:menuitem>
+                <p:menuitem value="Soporte" outcome="tabmenu.xhtml" icon="ui-icon-wrench">
+                    <f:param name="i" value="3" />
+                </p:menuitem>
+                <p:menuitem value="Social" outcome="tabmenu.xhtml" icon="ui-icon-person">
+                    <f:param name="i" value="4" />
+                </p:menuitem>
+            </p:tabMenu>
+            <p:button class="btn" outcome="index.xhtml" value="Regresar" icon="ui-icon-star"/>
+        </h:form>
+    </h:body>
+</html>
