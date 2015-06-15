@@ -4,7 +4,7 @@
     <br/>
     <p>El punto fuerte de PrimeFaces es la sencillez de instalación y lo poco pesado que es. El mantenerlo liviano, sin complicaciones a la hora de instalarlo, es decir, sin dependencias ni configuraciones, hace que podamos estar usándolo en unos pocos segundos. Veremos en este proyecto cómo hacerlo, y nos introduciremos en uno de los frameworks más populares en el mundo JSF.</p>
     <br/><br/>
-    <h2>Tipos de de Menus en Primefaces</h2>
+    <h2>Tipos de Menus en Primefaces</h2>
     <p>Estos son los menús que vas a encontrar en el proyecto:</p>
     <ul>
         <li>Breadcrumb</li>
